@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--命名空间应该是对应接口的包名+接口名 -->
+<mapper namespace="com.clot.dao.CyListDao">
+
+
+    <!--APP查询全部-->
+    <select id="selectComAll" resultType="Commodity">
+        select * from commodity;
+    </select>
+
+
+    <!--查询全部商品-->
+    <select id="selectCylist" resultMap="commoditylistMap">
+        select * from commoditylist c1
+        inner join
+        commoditybrand c2  on c1.Cybrandid=c2.Brandid
+        inner join
+        commoditycolor c3 on c1.Cycolorid = c3.Colorid
+        inner join
+        commoditytype c4 on c1.Cytypeid = c4.Typeid
+
+        LIMIT #{page},#{limit}
+    </select>
+
+    <!--定义商品实体类和数据库字段的关系-->
+    <resultMap id="commoditylistMap" type="commoditylist">
+        <id column="Cynumber" property="cynumber"/>
+        <result column="Cybrandid" property="cybrandid"/>
+        <result column="Cytypeid" property="cytypeid"/>
+        <result column="Cycolorid" property="cycolorid"/>
+        <result column="Cyname" property="cyname"/>
+        <result column="Cyprice" property="cyprice"/>
+        <result column="Cyphotoa" property="cyphotoa"/>
+        <result column="Cydetails" property="cydetails"/>
+        <result column="Cyphotob" property="cyphotob"/>
+        <!--多对一关系-->
+        <association property="commoditybrand" resultMap="BrandMap"/>
+        <association property="commoditycolor" resultMap="ColorMap"/>
+        <association property="commoditytype" resultMap="TypeMap"/>
+
+    </resultMap>
+
+    <!--定义实体类和数据库字段的关系-->
+    <resultMap id="BrandMap" type="commoditybrand">
+        <id column="Brandid" property="brandid"/>
+        <result column="Brandname" property="brandname" />
+    </resultMap>
+    <resultMap id="ColorMap" type="commoditycolor">
+        <id column="Colorid" property="colorid"/>
+        <result column="Colorname" property="colorname" />
+    </resultMap>
+    <resultMap id="TypeMap" type="commoditytype">
+        <id column="Typeid" property="typeid"/>
+        <result column="Typename" property="typename" />
+    </resultMap>
+
+
+    <select id="selectCylistCount" resultType="int">
+        select count(*) from commoditylist c1
+        inner join
+        commoditybrand c2  on c1.Cybrandid=c2.Brandid
+        inner join
+        commoditycolor c3 on c1.Cycolorid = c3.Colorid
+        inner join
+        commoditytype c4 on c1.Cytypeid = c4.Typeid
+    </select>
+
+
+    <!--注册-->
+    <insert id="addUser" parameterType="Commoditysignup" >
+        insert into commoditysignup(Firstname, Lastname, Emailaddress, Pamssword) VALUES(#{firstname},#{lastname},#{emailaddress},#{pamssword})
+    </insert>
+
+    <!--登录-->
+    <select id="loginUser"  resultType="int">
+      select count(*)  from commoditysignup
+      WHERE   Emailaddress= #{emailaddress} AND Pamssword= #{pamssword}
+    </select>
+
+    <!--删除-->
+    <delete id="deleteCommdity" parameterType="int">
+        delete from commoditylist  where Cynumber = #{cynumber}
+    </delete>
+    <!--添加-->
+    <insert id="insertCommoditylist" parameterType="Commoditylist" >
+        insert into commoditylist(Cybrandid,Cytypeid,Cycolorid,Cyname,Cyprice,Cyphotoa,Cydetails,Cyphotob)
+         values (#{cybrandid},#{cytypeid},#{cycolorid},#{cyname},#{cyprice},#{cyphotoa},#{cydetails},#{cyphotob})
+    </insert>
+
+</mapper>

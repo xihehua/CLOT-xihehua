@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Shop – CLOT</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-6a2b85cd/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Shop.css"/>
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-494f5ca2/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-1984ddce/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<script src="js/style.js"></script>
+		<style type="text/css">
+			@font-face {
+				font-family: Druk Web; /*这里是说明调用来的字体名字*/
+				src: url('fontello/Druk-Medium-Web.woff.ttf'); /*这里是字体文件路径*/
+			}
+		</style>
+		<style type="text/css">
+			
+			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+			::-webkit-scrollbar { 
+			    width: 8px; 
+			    height: 8px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滚动条轨道 内阴影+圆角*/ 	
+			::-webkit-scrollbar-track { 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+			    border-radius: 10px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滑块 内阴影+圆角*/ 
+			::-webkit-scrollbar-thumb { 
+			    border-radius: 10px; 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+			    background-color: #555; 
+			}
+
+
+			.overlay img {
+				width: 309px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fjAlls">
+		<!--页面顶部开始-->
+		<div class="header-top-con">
+		<!--菜单按钮'三'-->
+		<div class="header-mobile-buttons" id="mbbu">
+			<div class="butts">
+				<span id="caidan" class="icon-menu"></span>
+			</div>
+
+			<div class="header-nav-menu-dropdown" id="child">
+				<div class="footecol-max8">
+					<div class="footemaxa">
+						<img src="img/footer_link_about--white.png" width="197px"height="94px" id="footemaxa"/>
+					</div>
+					<div class="footemaxb">
+						<img src="img/shipping--white.png" width="197px"height="94px" id="footemaxb"/>
+					</div>
+					<div class="footemaxc">
+						<img src="img/orders--white.png" width="197px"height="94px" id="footemaxc"/>
+					</div>
+					<div class="footemaxd">
+						<img src="img/returns--white.png" width="197px"height="94px" id="footemaxd"/>
+					</div>
+					<div class="footemaxe">
+						<img src="img/juice--white.png" width="197px"height="94px" id="footemaxe"/>
+					</div>
+					<div class="footemaxf">
+						<img src="img/faq--white.png" width="197px"height="94px" id="footemaxf"/>
+					</div>
+					<div class="footemaxg">
+						<img src="img/contact--white.png" width="197px"height="94px" id="footemaxg"/>
+					</div>
+					<div class="footemaxh">
+						<img src="img/joinus--white.png" width="197px"height="94px" id="footemaxh"/>
+					</div>
+				</div>
+
+				<div class="footer-bottom-inner">
+					<h4>Get Updates!</h4>
+					<div class="footer-div">
+						<input type="text" placeholder="EMAIL"; id="footer-inputa" />
+						<input type="button" id="footer-inputb" value="SIGN UP" />
+					</div>
+					<div class="footer-socials">
+						<span class="icon-facebook-rect"></span>
+						<span class="icon-instagram"></span>
+						<span class="icon-youtube-play"></span>
+						<span class="icon-soundcloud"></span>
+						<span class="icon-weibo"></span>
+						<span class="icon-wechat"></span>
+					</div>
+				</div>
+
+				<div class="null"></div>
+			</div>
+		</div>
+
+		<!--菜单按钮'三'结束-->
+
+
+		<div class="header-text-con">
+			<ul class="header-text-ul">
+				<li class="header-text-li"><a href="shop.html">SHOP</a></li>
+				<li class="header-text-li"><a href="editorial.html">COLLECTIONS</a></li>
+				<li class="header-text-li see">DISCOVER
+				<div class="seediv">
+					<div class="medium-up">
+						<div class="lookbook-dropdown">
+							<span id="pres">PRESENTING CLOT'S FALL/WINTER 2018 "CLOTOPIA" COLLECTION</span>
+						</div>
+						<div class="collection-grid-item">
+							<img class="collection-grid-box" src="img/0_540x.jpg" width="100%" height="100%"></img>
+						</div>
+					</div>
+
+					<div class="medium-up">
+						<div class="lookbook-dropdown">
+							<span id="pres">STOCK UP ON FEAR OF GOD ESSENTIALS' LINE OF BASKETBALL-INSPIRED BASICS</span>
+						</div>
+						<div class="collection-grid-item">
+							<img class="collection-grid-box" src="img/clot-juice-fear-of-god-essentials-1-4_540x.jpg" width="100%" height="100%"></img>
+						</div>
+					</div>
+
+					<div class="medium-up">
+						<div class="lookbook-dropdown">
+							<span id="pres">CLOTTEE'S AUTUMN 2018 COLLECTION IS "BATTLE ROYALE" BROUGHT TO LIFE</span>
+						</div>
+						<div class="collection-grid-item">
+							<img class="collection-grid-box" src="img/clottee-battle-royale-fw-18-1-1_540x.jpg" width="100%" height="100%"></img>
+						</div>
+					</div>
+				</div>
+				</li>
+			</ul>
+		</div>
+
+		<div class="header-logo-con">
+			<a href="CLOT.html"><img src="img/logo.png" width="36px" height="38px"/></a>
+		</div>
+
+		<div class="header-right-con">
+			<div class="header-MLC">
+				<div class="header-right-music">
+					<g>i</g>Music
+				</div>
+				<div class="header-right-login">
+					<a href="login.html">Login</a>
+
+				</div>
+				<div class="header-right-cny">
+					<a href="account.html">CNY</a><img src="img/shangjiao.png" width="16px"height="16px" />
+				</div>
+				<div class="null" style="clear: both;"></div>
+			</div>
+
+
+			<div class="header-country-trigger">
+				<div class="butts">
+					<span id="caidan" class="icon-globe"></span>
+				</div>
+			</div>
+			<div class="header-country-search">
+				<div class="butts">
+					<span id="caidan" class="icon-search"></span>
+				</div>
+			</div>
+			<div class="header-country-wishlist">
+				<div class="butts">
+					<span id="caidan" class="icon-heart"></span>
+				</div>
+			</div>
+			<div class="header-country-each">
+				<a href="shopping cart.html">
+					<div class="butts">
+						<span id="caidan" class="icon-shopping-bag"></span>
+					</div>
+				</a>
+			</div>
+		</div>
+
+		<div class="null" ></div>
+	</div>
+		<!--页面顶部结束-->
+		
+		<!--展示区开始-->
+		
+		<div class="collection-bannerk"></div>
+		
+		<div class="ction-ba">
+			<div class="col-dl">
+				<div class="sort-by">
+					<form class="layui-form" action="">
+						<select name="city" lay-verify="">
+						  <option value="">Newest</option>
+						  <option value="010">Featured</option>
+						  <option value="021">Price low to high</option>
+						  <option value="0571">Price high to low</option>
+						</select>     
+					</form>
+				</div>
+			</div>
+			<!--手风琴-->
+			<div class="collecdown">
+				<div class="content">
+					<div class="list">
+						<ul>
+							<li>
+								<p class="title">TYPE</p>
+								<ul class='list-se'>
+									<p class="title">TYPE</p>
+									<li><p>T-Shirts</p></li>
+									<li><p>Sweatshirts</p></li>
+									<li><p>Jackets</p></li>
+									<li><p>Jeans</p></li>
+								</ul>
+							</li>
+							<li>
+								<p class="title">DESIGNER</p>
+								<ul class='list-se'>
+									<p class="title">DESIGNER</p>
+									<li><p>CLOT</p></li>
+									<li><p>CLOTTEE By CLOT</p></li>
+									<li><p>4PK</p></li>
+									<li><p>A-Cold-Wall*</p></li>
+									<li><p>A-Four Labs</p></li>
+									<li><p>adidas</p></li>
+									<li><p>AiE</p></li>
+									<li><p>All Gone</p></li>
+									<li><p>Alyx</p></li>
+									<li><p>Ambush</p></li>
+								</ul>
+							</li>
+							<li>
+								<p class="title">SIZES</p>
+								<ul class='list-se'>
+									<p class="title">SIZES</p>
+									<li><p>S</p></li>
+									<li><p>M</p></li>
+									<li><p>L</p></li>
+									<li><p>XL</p></li>
+									<li><p>XXL</p></li>
+									<li><p>XXL</p></li>
+								</ul>
+							</li>
+							<li>
+								<p class="title">COLORS</p>
+								<ul class='list-se'>
+									<p class="title">COLORS</p>
+									<li><p>White</p></li>
+									<li><p>Beige</p></li>
+									<li><p>Black</p></li>
+									<li><p>Navy</p></li>
+									<li><p>Blue</p></li>
+									<li><p>Red</p></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			<div class="collection-list" id="collectionID">
+
+				<!--<div class="col-tablet">-->
+					<!--<div class="overlay" style="background-image: url(img/IMG01a.jpg);"></div>-->
+
+					<!--<div class="overlay-Contrary" style="background-image: url(img/IMG01b.jpg);">-->
+
+						<!--<div class="trary-but">-->
+							<!--<a href="juice store.html"><div class="Contrary-butte">QUICK VIEW</div></a>-->
+						<!--</div>-->
+
+					<!--</div>-->
+
+					<!--<div class="product-each-brand">BRAIN DEAD</div>-->
+						<!--<h5>Realism T-Shirt</h5>-->
+					<!--<h6>¥1,482.00 CNY</h6>-->
+				<!--</div>-->
+				
+				
+
+			</div>
+			
+			<div class="fenye" ></div>
+			
+			<div class="null"></div>
+		</div>
+
+		<!--底部开始-->
+		<div class="shopify-section-footer">
+			<div class="header-nav-menu-dropdownb" id="child">
+				<div class="footecol-max8">
+					<div class="footemaxaa">
+						<img src="img/footer_link_about--white.png" width="197px"height="94px" id="footemaxaa"/>
+					</div>
+					<div class="footemaxbb">
+						<img src="img/shipping--white.png" width="197px"height="94px" id="footemaxbb"/>
+					</div>
+					<div class="footemaxcc">
+						<img src="img/orders--white.png" width="197px"height="94px" id="footemaxcc"/>
+					</div>
+					<div class="footemaxdd">
+						<img src="img/returns--white.png" width="197px"height="94px" id="footemaxdd"/>
+					</div>
+					<div class="footemaxee">
+						<img src="img/juice--white.png" width="197px"height="94px" id="footemaxee"/>
+					</div>
+					<div class="footemaxff">
+						<img src="img/faq--white.png" width="197px"height="94px" id="footemaxff"/>
+					</div>
+					<div class="footemaxgg">
+						<img src="img/contact--white.png" width="197px"height="94px" id="footemaxgg"/>
+					</div>
+					<div class="footemaxhh">
+						<img src="img/joinus--white.png" width="197px"height="94px" id="footemaxhh"/>
+					</div>
+				</div>
+				
+				<div class="footer-bottom-inner">
+					<h4>Get Updates!</h4>
+					<div class="footer-div">
+						<input type="text" placeholder="EMAIL"; id="footer-inputa" />
+						<input type="button" id="footer-inputb" value="SIGN UP" />
+					</div>
+					<div class="footer-socials">
+						<span class="icon-facebook-rect"></span>
+						<span class="icon-instagram"></span>
+						<span class="icon-youtube-play"></span>
+						<span class="icon-soundcloud"></span>
+						<span class="icon-weibo"></span>
+						<span class="icon-wechat"></span>
+					</div>
+				</div>
+						<div class="null"></div>
+				<div class="footer-message">
+					<p>Copyright © 2018 CLOT 	
+						<a href="/pages/terms-of-use" class="footer-link">Terms of use</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+						<a href="/pages/privacy-policy" class="footer-link">Privacy &amp; Cookies</a>
+					</p>
+				</div>
+				
+				<div class="null"></div>
+			</div>
+		</div>
+		
+		<!--底部结束-->
+		</div>
+	</body>
+
+	<script src="js/template-web.js"></script>
+	<!--<script type="text/html" id="templateColletcion">-->
+		<!--{{each list as p i }}-->
+		<!--<div class="col-tablet">-->
+			<!--<div class="overlay" >-->
+				<!--<img src="img/{{p.cyphotoa}}" alt="">-->
+			<!--</div>-->
+
+			<!--<div class="overlay-Contrary" >-->
+
+				<!--<div class="trary-but">-->
+					<!--<a href="juice store.html"><div class="Contrary-butte">QUICK VIEW</div></a>-->
+				<!--</div>-->
+				<!--&lt;!&ndash;<img src="img/{{}}" alt="">&ndash;&gt;-->
+			<!--</div>-->
+
+			<!--<div class="product-each-brand">BRAIN DEAD</div>-->
+			<!--<h5>Realism T-Shirt</h5>-->
+			<!--<h6>¥1,482.00 CNY</h6>-->
+		<!--</div>-->
+		<!--{{/each}}-->
+
+	<!--</script>-->
+	<script type="text/javascript">
+		function show() {
+            $.ajax({
+                type:"get",
+                url:"commodity/selectCyList",
+                contentType:"application/json;charset=utf-8",
+                data:{page:1,limit:60},
+                dataType:"json",
+                success:function(data){
+                   // console.log(data.data);
+                   //$("#collectionID").append(template("templateColletcion",{list:data.data}))
+
+                    if (data.code==0){
+
+                        for (var i=0;i<data.data.length; i++){
+                            var obj=data.data[i];
+                            var collectionList=$(".collection-list");
+                            var colTablet=$("<div>").prop("class","col-tablet");
+                            var overlay=$("<div>").prop("class","overlay").prop("style","background-image: url(img/"+obj.cyphotoa+");");
+                            var overlayContrary=$("<div>").prop("class","overlay-Contrary").prop("style","background-image: url(img/"+obj.cyphotob+");");
+                            var traryBut=$("<div>").prop("class","trary-but");
+                            var a1=$("<a>").prop("href","juice store.html");
+                            var Contrarybutte=$("<div>").prop("class","Contrary-butte").text("QUICK VIEW").attr("id",obj.cynumber);
+                            var producteachbrand=$("<div>").prop("class","product-each-brand").text(obj.cyname);
+                            var h5=$("<h5>").text(obj.commoditybrand.brandname);
+
+                            var h6=$("<h6>").text("$,"+obj.cyprice+"HKD");
+
+                            $(Contrarybutte).appendTo(a1);
+
+                            $(a1).appendTo(traryBut);
+
+                            $(traryBut).appendTo(overlayContrary);
+
+                            $(overlay).appendTo(colTablet);
+                            $(overlayContrary).appendTo(colTablet);
+                            $(producteachbrand).appendTo(colTablet);
+                            $(h5).appendTo(colTablet);
+                            $(h6).appendTo(colTablet);
+
+                            $(colTablet).appendTo(collectionList);
+
+                        }
+						clicks();
+                    }
+                },
+				complete:function () {
+                    $(".ction-ba .col-tablet .overlay").mouseenter(function(){
+                        $(this).next().css("z-index", 3);
+                    })
+
+                    $(".ction-ba .col-tablet .overlay-Contrary").mouseleave(function(){
+                        $(this).css("z-index", -1);
+                    })
+                }
+            })
+        }
+        show();
+		function  clicks() {
+			$(".Contrary-butte").each(function () {
+				$(this).click(function () {
+					var id=$(this).attr("id");
+					alert(id);
+
+                })
+            })
+        }
+	</script>
+
+
+	<script type="text/javascript">
+		var div=document.getElementById("mbbu");
+		var child=document.getElementById("child");
+		div.onmousemove=function(){
+			child.style.display="block";
+		}
+		div.onmouseout=function(){
+			child.style.display="none"
+		}
+		
+		var div=document.getElementById("footemaxa");
+		div.onmousemove = function(){
+			div.src="img/about--black.png"
+		}
+		div.onmouseout = function(){
+			div.src="img/about--white.png"
+		}
+		
+		var divb=document.getElementById("footemaxb");
+		divb.onmousemove = function(){
+			divb.src="img/shipping--black.png"
+		}
+		divb.onmouseout = function(){
+			divb.src="img/shipping--white.png"
+		}
+		
+		var divc=document.getElementById("footemaxc");
+		divc.onmousemove = function(){
+			divc.src="img/orders--black.png"
+		}
+		divc.onmouseout = function(){
+			divc.src="img/orders--white.png"
+		}
+		var divd=document.getElementById("footemaxd");
+		divd.onmousemove = function(){
+			divd.src="img/returns--black.png"
+		}
+		divd.onmouseout = function(){
+			divd.src="img/returns--white.png"
+		}
+		
+		var dive=document.getElementById("footemaxe");
+		dive.onmousemove = function(){
+			dive.src="img/juice--black.png"
+		}
+		dive.onmouseout = function(){
+			dive.src="img/juice--white.png"
+		}
+		
+		var divf=document.getElementById("footemaxf");
+		divf.onmousemove = function(){
+			divf.src="img/faq--black.png"
+		}
+		divf.onmouseout = function(){
+			divf.src="img/faq--white.png"
+		}
+		
+		var divg=document.getElementById("footemaxg");
+		divg.onmousemove = function(){
+			divg.src="img/contact--black.png"
+		}
+		divg.onmouseout = function(){
+			divg.src="img/contact--white.png"
+		}
+		
+		var divh=document.getElementById("footemaxh");
+		divh.onmousemove = function(){
+			divh.src="img/joinus--black.png"
+		}
+		divh.onmouseout = function(){
+			divh.src="img/joinus--white.png"
+		}
+		
+		
+		
+		var diva=document.getElementById("footemaxaa");
+		diva.onmousemove = function(){
+			diva.src="img/about--black.png"
+		}
+		diva.onmouseout = function(){
+			diva.src="img/about--white.png"
+		}
+		
+		var divbb=document.getElementById("footemaxbb");
+		divbb.onmousemove = function(){
+			divbb.src="img/shipping--black.png"
+		}
+		divbb.onmouseout = function(){
+			divbb.src="img/shipping--white.png"
+		}
+		
+		var divcc=document.getElementById("footemaxcc");
+		divcc.onmousemove = function(){
+			divcc.src="img/orders--black.png"
+		}
+		divcc.onmouseout = function(){
+			divcc.src="img/orders--white.png"
+		}
+		var divdd=document.getElementById("footemaxdd");
+		divdd.onmousemove = function(){
+			divdd.src="img/returns--black.png"
+		}
+		divdd.onmouseout = function(){
+			divdd.src="img/returns--white.png"
+		}
+		
+		var divee=document.getElementById("footemaxee");
+		divee.onmousemove = function(){
+			divee.src="img/juice--black.png"
+		}
+		divee.onmouseout = function(){
+			divee.src="img/juice--white.png"
+		}
+		
+		var divff=document.getElementById("footemaxff");
+		divff.onmousemove = function(){
+			divff.src="img/faq--black.png"
+		}
+		divff.onmouseout = function(){
+			divff.src="img/faq--white.png"
+		}
+		
+		var divgg=document.getElementById("footemaxgg");
+		divgg.onmousemove = function(){
+			divgg.src="img/contact--black.png"
+		}
+		divgg.onmouseout = function(){
+			divgg.src="img/contact--white.png"
+		}
+		
+		var divhh=document.getElementById("footemaxhh");
+		divhh.onmousemove = function(){
+			divhh.src="img/joinus--black.png"
+		}
+		divhh.onmouseout = function(){
+			divhh.src="img/joinus--white.png"
+		}
+	</script>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) 
+		{
+			$('.list ul li p').clickdown();
+			$('.list-se p[class=title]').clickup();
+			$('.list>ul>li').ad();
+		});
+	</script>
+	<script type="text/javascript">
+		//Demo
+		layui.use('form', function(){
+		  var form = layui.form;
+		  
+		  //监听提交
+		  form.on('submit(formDemo)', function(data){
+		    layer.msg(JSON.stringify(data.field));
+		    return false;
+		  });
+		});
+	</script>
+
+	<!--鼠标切换-->
+	<!--<script type="text/javascript">-->
+
+	<!--$(".ction-ba .col-tablet .overlay").mouseenter(function(){-->
+	<!--alert(1);-->
+	<!--$(this).next().css("z-index", 3);-->
+	<!--})-->
+
+	<!--$(".ction-ba .col-tablet .overlay-Contrary").mouseleave(function(){-->
+	<!--$(this).css("z-index", -1);-->
+	<!--})-->
+
+	<!--</script>-->
+</html>

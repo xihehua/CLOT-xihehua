@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Editorial – JUICE STORE</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-6a2b85cd/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Editorial.css"/>
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-494f5ca2/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-1984ddce/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+		<script type="text/javascript" src="layui/layui.js"></script>
+		<script src="js/style.js"></script>
+		<style type="text/css">
+			@font-face {
+				font-family: Druk Web; /*这里是说明调用来的字体名字*/
+				src: url('fontello/Druk-Medium-Web.woff.ttf'); /*这里是字体文件路径*/
+			}
+			
+		</style>
+		<style type="text/css">
+			
+			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+			::-webkit-scrollbar { 
+			    width: 8px; 
+			    height: 8px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滚动条轨道 内阴影+圆角*/ 	
+			::-webkit-scrollbar-track { 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+			    border-radius: 10px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滑块 内阴影+圆角*/ 
+			::-webkit-scrollbar-thumb { 
+			    border-radius: 10px; 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+			    background-color: #555; 
+			} 
+			
+		</style>
+	</head>
+	<body  style="overflow-x:hidden;">
+		<div class="fjAlls">
+		<!--页面顶部开始-->
+			<div class="header-top-con">
+			<!--菜单按钮'三'-->
+			<div class="header-mobile-buttons" id="mbbu">
+				<div class="butts">
+					<span id="caidan" class="icon-menu"></span>
+				</div>
+				
+				<div class="header-nav-menu-dropdown" id="child">
+					<div class="footecol-max8">
+						<div class="footemaxa">
+							<img src="img/footer_link_about--white.png" width="197px"height="94px" id="footemaxa"/>
+						</div>
+						<div class="footemaxb">
+							<img src="img/shipping--white.png" width="197px"height="94px" id="footemaxb"/>
+						</div>
+						<div class="footemaxc">
+							<img src="img/orders--white.png" width="197px"height="94px" id="footemaxc"/>
+						</div>
+						<div class="footemaxd">
+							<img src="img/returns--white.png" width="197px"height="94px" id="footemaxd"/>
+						</div>
+						<div class="footemaxe">
+							<img src="img/juice--white.png" width="197px"height="94px" id="footemaxe"/>
+						</div>
+						<div class="footemaxf">
+							<img src="img/faq--white.png" width="197px"height="94px" id="footemaxf"/>
+						</div>
+						<div class="footemaxg">
+							<img src="img/contact--white.png" width="197px"height="94px" id="footemaxg"/>
+						</div>
+						<div class="footemaxh">
+							<img src="img/joinus--white.png" width="197px"height="94px" id="footemaxh"/>
+						</div>
+					</div>
+					
+					<div class="footer-bottom-inner">
+						<h4>Get Updates!</h4>
+						<div class="footer-div">
+							<input type="text" placeholder="EMAIL"; id="footer-inputa" />
+							<input type="button" id="footer-inputb" value="SIGN UP" />
+						</div>
+						<div class="footer-socials">
+							<span class="icon-facebook-rect"></span>
+							<span class="icon-instagram"></span>
+							<span class="icon-youtube-play"></span>
+							<span class="icon-soundcloud"></span>
+							<span class="icon-weibo"></span>
+							<span class="icon-wechat"></span>
+						</div>
+					</div>
+					
+					<div class="null"></div>
+				</div>
+			</div>
+			
+			<!--菜单按钮'三'结束-->
+			
+			
+			<div class="header-text-con">
+				<ul class="header-text-ul">
+					<li class="header-text-li"><a href="shop.html">SHOP</a></li>
+					<li class="header-text-li"><a href="editorial.html">COLLECTIONS</a></li>
+					<li class="header-text-li see">DISCOVER
+					<div class="seediv">
+						<div class="medium-up">
+							<div class="lookbook-dropdown">
+								<span id="pres">PRESENTING CLOT'S FALL/WINTER 2018 "CLOTOPIA" COLLECTION</span>
+							</div>
+							<div class="collection-grid-item">
+								<img class="collection-grid-box" src="img/0_540x.jpg" width="100%" height="100%"></img> 	
+							</div>
+						</div>
+						
+						<div class="medium-up">
+							<div class="lookbook-dropdown">
+								<span id="pres">STOCK UP ON FEAR OF GOD ESSENTIALS' LINE OF BASKETBALL-INSPIRED BASICS</span>
+							</div>
+							<div class="collection-grid-item">
+								<img class="collection-grid-box" src="img/clot-juice-fear-of-god-essentials-1-4_540x.jpg" width="100%" height="100%"></img> 	
+							</div>
+						</div>
+						
+						<div class="medium-up">
+							<div class="lookbook-dropdown">
+								<span id="pres">CLOTTEE'S AUTUMN 2018 COLLECTION IS "BATTLE ROYALE" BROUGHT TO LIFE</span>
+							</div>
+							<div class="collection-grid-item">
+								<img class="collection-grid-box" src="img/clottee-battle-royale-fw-18-1-1_540x.jpg" width="100%" height="100%"></img> 	
+							</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="header-logo-con">
+				<a href="CLOT.html"><img src="img/logo.png" width="36px" height="38px"/></a>
+			</div>
+			
+			<div class="header-right-con">
+				<div class="header-MLC">
+					<div class="header-right-music">
+						<g>i</g>Music
+					</div>
+					<div class="header-right-login">
+						<a href="login.html">Login</a>
+						
+					</div>
+					<div class="header-right-cny">
+						<a href="account.html">CNY</a><img src="img/shangjiao.png" width="16px"height="16px" />
+					</div>
+					<div class="null" style="clear: both;"></div>
+				</div>
+				
+				
+				<div class="header-country-trigger">
+					<div class="butts">
+						<span id="caidan" class="icon-globe"></span>
+					</div>
+				</div>
+				<div class="header-country-search">
+					<div class="butts">
+						<span id="caidan" class="icon-search"></span>
+					</div>
+				</div>
+				<div class="header-country-wishlist">
+					<div class="butts">
+						<span id="caidan" class="icon-heart"></span>
+					</div>
+				</div>
+				<div class="header-country-each">
+					<a href="shopping cart.html">
+						<div class="butts">
+							<span id="caidan" class="icon-shopping-bag"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="null" ></div>
+		</div>
+			<!--页面顶部结束-->
+		
+		<!--展示开始-->
+		
+			<div class="page-width">
+				<span class="page-edit">EDITORIAL</span>     
+				<ul>
+					<li>ALL</li>
+					<li>CLOT</li>
+					<li>FASHION</li>
+					<li>FOOTWEAR</li>
+					<li>LIFESTYLE</li>
+					<li>MUSIC</li>
+				</ul>
+			</div> 
+			
+			<div class="imgtest">
+				<a href="blogs.html">
+					<div class="page-widths">
+					<div class="image-container">
+						<img src="img/MG_1071_648x_crop_center.jpg" width="100%" height="100%"/>
+					</div>
+					
+					<div class="text-container">
+						<div>
+							<span class="spanjuie">
+								JUICE SUPPLIES ARRIVES - CELEBRATING ITS 15TH ANNIVERSARY WITH EXCLUSIVE STORE MERCH
+							</span>	
+						</div>
+						<div style="margin:10px 0;">
+							<span class="spanby">
+								BY HELENA YEUNG/ LIFESTYLE/ OCTOBER 15, 2018
+							</span>
+						</div>
+						<div>
+							<span class="spanThe">
+								The store has become the go-to space for 
+								the latest contemporary and streetwear brands, 
+								including the best selection of sneakers worldwide.
+							</span>
+						</div>
+					</div>
+					<div class="null"></div>
+					</div> 
+				</a>
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/clottee-battle-royale-fw-18-6_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							WATCH CLOTTEE'S "BATTLE ROYALE" COLLECTION COME TO LIFE
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FASHION/ OCTOBER 13, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							Our campaign video highlights this season's top pieces.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/0_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							PRESENTING CLOT'S FALL/WINTER 2018 "CLOTOPIA" COLLECTION
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FASHION/ OCTOBER 12, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							Our latest collection features out-of-this world references to Utopia.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+			
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/jw-anderson-converse-felt-collaboration-0_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							J.W. ANDERSON'S LATEST CONVERSE COLLABORATION IS AVAILABLE NOW
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FOOTWEAR/ OCTOBER 11, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							Available in three colorways.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/daniel-arsham-adidas-futurecraft-4d-release-date-price-02_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							DANIEL ARSHAM X ADIDAS FUTURECRAFT 4D
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY CLARENCE YUEN/ FOOTWEAR/ OCTOBER 10, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							Set to release on October 12th, the Daniel Arsham x adidas Futurecraft 4D is now open for JUICE Hong Kong!
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/clottee-battle-royale-fw-18-1-1_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							CLOTTEE'S AUTUMN 2018 COLLECTION IS "BATTLE ROYALE" BROUGHT TO LIFE
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FASHION/ OCTOBER 09, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							CLOT's diffusion line features a range of streetwear silhouettes, 
+							this time inspired by the movie 'Battle Royale.'
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/clot-juice-fear-of-god-essentials-1-4_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							STOCK UP ON FEAR OF GOD ESSENTIALS' LINE OF BASKETBALL-INSPIRED BASICS
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FASHION/ OCTOBER 09, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							Wardrobe staples for the athleisure-minded.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/clot-alienegra-desert-camo-launch-event-juice-sheungwan-9_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							CLOT "ALIENEGRA DESERT CAMO" LAUNCH PARTY VIDEO RECAP
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ CLOT/ OCTOBER 05, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							See what you missed.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/new-converse-off-white-chuck-70-images-01_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							OFF-WHITE X CONVERSE CHUCK 70
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY CLARENCE YUEN/ FOOTWEAR/ OCTOBER 04, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							Set to release on October 8th, the Off-White x Converse Chuck 70 
+							is now open for JUICE Hong Kong and CLOT Online!
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/jw-anderson-felt-converse-chuck-70-7_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							J.W. ANDERSON AND CONVERSE CONTINUE PARTNERSHIP WITH NEW COLLECTION
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FOOTWEAR/ OCTOBER 03, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							All new, all felt.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/converse-off-white-virgil-abloh-chuck-70-sneaker-3_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							CONVERSE LINKS UP WITH OFF-WHITE FOR ANOTHER COLLABORATION
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FOOTWEAR/ OCTOBER 03, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							The Chuck 70 gets the Virgil Abloh treatment.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				<div class="page-widths">
+				<div class="image-container">
+					<img src="img/clot-alienegra-desert-camo-launch-event-juice-sheungwan-7_648x_crop_center.jpg" width="100%" height="100%"/>
+				</div>
+				
+				<div class="text-container">
+					<div>
+						<span class="spanjuie">
+							CLOT "ALIENEGRA DESERT CAMO" LAUNCH EVENT RECAP
+						</span>	
+					</div>
+					<div style="margin:10px 0;">
+						<span class="spanby">
+							BY HELENA YEUNG/ FASHION/ SEPTEMBER 28, 2018
+						</span>
+					</div>
+					<div>
+						<span class="spanThe">
+							With music from Maximus MMC and drinks sponsored by Heineken, 
+							the event was the perfect celebration of our new collection.
+						</span>
+					</div>
+				</div>
+				<div class="null"></div>
+				</div> 
+				
+				<div class="pagination-main">
+					
+				</div>
+				
+			</div>
+		
+		<!--展示结束-->
+		
+				<!--底部开始-->
+		<div class="shopify-section-footer">
+			<div class="header-nav-menu-dropdownb" id="child">
+				<div class="footecol-max8">
+					<div class="footemaxaa">
+						<img src="img/footer_link_about--white.png" width="197px"height="94px" id="footemaxaa"/>
+					</div>
+					<div class="footemaxbb">
+						<img src="img/shipping--white.png" width="197px"height="94px" id="footemaxbb"/>
+					</div>
+					<div class="footemaxcc">
+						<img src="img/orders--white.png" width="197px"height="94px" id="footemaxcc"/>
+					</div>
+					<div class="footemaxdd">
+						<img src="img/returns--white.png" width="197px"height="94px" id="footemaxdd"/>
+					</div>
+					<div class="footemaxee">
+						<img src="img/juice--white.png" width="197px"height="94px" id="footemaxee"/>
+					</div>
+					<div class="footemaxff">
+						<img src="img/faq--white.png" width="197px"height="94px" id="footemaxff"/>
+					</div>
+					<div class="footemaxgg">
+						<img src="img/contact--white.png" width="197px"height="94px" id="footemaxgg"/>
+					</div>
+					<div class="footemaxhh">
+						<img src="img/joinus--white.png" width="197px"height="94px" id="footemaxhh"/>
+					</div>
+				</div>
+				
+				<div class="footer-bottom-inner">
+					<h4>Get Updates!</h4>
+					<div class="footer-div">
+						<input type="text" placeholder="EMAIL"; id="footer-inputa" />
+						<input type="button" id="footer-inputb" value="SIGN UP" />
+					</div>
+					<div class="footer-socials">
+						<span class="icon-facebook-rect"></span>
+						<span class="icon-instagram"></span>
+						<span class="icon-youtube-play"></span>
+						<span class="icon-soundcloud"></span>
+						<span class="icon-weibo"></span>
+						<span class="icon-wechat"></span>
+					</div>
+				</div>
+						<div class="null"></div>
+				<div class="footer-message">
+					<p>Copyright © 2018 CLOT 	
+						<a href="/pages/terms-of-use" class="footer-link">Terms of use</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+						<a href="/pages/privacy-policy" class="footer-link">Privacy &amp; Cookies</a>
+					</p>
+				</div>
+				
+				<div class="null"></div>
+			</div>
+		</div>
+		
+		<!--底部结束-->
+		</div>
+	</body>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript">
+		var div=document.getElementById("mbbu");
+		var child=document.getElementById("child");
+		div.onmousemove=function(){
+			child.style.display="block";
+		}
+		div.onmouseout=function(){
+			child.style.display="none"
+		}
+		
+		var div=document.getElementById("footemaxa");
+		div.onmousemove = function(){
+			div.src="img/about--black.png"
+		}
+		div.onmouseout = function(){
+			div.src="img/about--white.png"
+		}
+		
+		var divb=document.getElementById("footemaxb");
+		divb.onmousemove = function(){
+			divb.src="img/shipping--black.png"
+		}
+		divb.onmouseout = function(){
+			divb.src="img/shipping--white.png"
+		}
+		
+		var divc=document.getElementById("footemaxc");
+		divc.onmousemove = function(){
+			divc.src="img/orders--black.png"
+		}
+		divc.onmouseout = function(){
+			divc.src="img/orders--white.png"
+		}
+		var divd=document.getElementById("footemaxd");
+		divd.onmousemove = function(){
+			divd.src="img/returns--black.png"
+		}
+		divd.onmouseout = function(){
+			divd.src="img/returns--white.png"
+		}
+		
+		var dive=document.getElementById("footemaxe");
+		dive.onmousemove = function(){
+			dive.src="img/juice--black.png"
+		}
+		dive.onmouseout = function(){
+			dive.src="img/juice--white.png"
+		}
+		
+		var divf=document.getElementById("footemaxf");
+		divf.onmousemove = function(){
+			divf.src="img/faq--black.png"
+		}
+		divf.onmouseout = function(){
+			divf.src="img/faq--white.png"
+		}
+		
+		var divg=document.getElementById("footemaxg");
+		divg.onmousemove = function(){
+			divg.src="img/contact--black.png"
+		}
+		divg.onmouseout = function(){
+			divg.src="img/contact--white.png"
+		}
+		
+		var divh=document.getElementById("footemaxh");
+		divh.onmousemove = function(){
+			divh.src="img/joinus--black.png"
+		}
+		divh.onmouseout = function(){
+			divh.src="img/joinus--white.png"
+		}
+		
+		
+		
+		var diva=document.getElementById("footemaxaa");
+		diva.onmousemove = function(){
+			diva.src="img/about--black.png"
+		}
+		diva.onmouseout = function(){
+			diva.src="img/about--white.png"
+		}
+		
+		var divbb=document.getElementById("footemaxbb");
+		divbb.onmousemove = function(){
+			divbb.src="img/shipping--black.png"
+		}
+		divbb.onmouseout = function(){
+			divbb.src="img/shipping--white.png"
+		}
+		
+		var divcc=document.getElementById("footemaxcc");
+		divcc.onmousemove = function(){
+			divcc.src="img/orders--black.png"
+		}
+		divcc.onmouseout = function(){
+			divcc.src="img/orders--white.png"
+		}
+		var divdd=document.getElementById("footemaxdd");
+		divdd.onmousemove = function(){
+			divdd.src="img/returns--black.png"
+		}
+		divdd.onmouseout = function(){
+			divdd.src="img/returns--white.png"
+		}
+		
+		var divee=document.getElementById("footemaxee");
+		divee.onmousemove = function(){
+			divee.src="img/juice--black.png"
+		}
+		divee.onmouseout = function(){
+			divee.src="img/juice--white.png"
+		}
+		
+		var divff=document.getElementById("footemaxff");
+		divff.onmousemove = function(){
+			divff.src="img/faq--black.png"
+		}
+		divff.onmouseout = function(){
+			divff.src="img/faq--white.png"
+		}
+		
+		var divgg=document.getElementById("footemaxgg");
+		divgg.onmousemove = function(){
+			divgg.src="img/contact--black.png"
+		}
+		divgg.onmouseout = function(){
+			divgg.src="img/contact--white.png"
+		}
+		
+		var divhh=document.getElementById("footemaxhh");
+		divhh.onmousemove = function(){
+			divhh.src="img/joinus--black.png"
+		}
+		divhh.onmouseout = function(){
+			divhh.src="img/joinus--white.png"
+		}
+		
+
+	</script>
+</html>

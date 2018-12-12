@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Customer information-CLOT</title>
+		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="css/Checkouts.css"/>
+	</head>
+	
+	<style type="text/css">
+			@font-face {
+				font-family: Druk Web; /*这里是说明调用来的字体名字*/
+				src: url('fontello/Druk-Medium-Web.woff.ttf'); /*这里是字体文件路径*/
+			}
+		</style>
+		<style type="text/css">
+			
+			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+			::-webkit-scrollbar { 
+			    width: 8px; 
+			    height: 8px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滚动条轨道 内阴影+圆角*/ 	
+			::-webkit-scrollbar-track { 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+			    border-radius: 10px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滑块 内阴影+圆角*/ 
+			::-webkit-scrollbar-thumb { 
+			    border-radius: 10px; 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+			    background-color: #555; 
+			} 
+		</style>
+	<body>
+		<div class="fjdiv">
+			<div class="main">
+				<div class="mainas">
+					<div class="imgslog">
+						<div class="umg"><img src="img/checkout.jpg" width="100%"/></div>
+					</div>
+					<div class="ullicart">
+						<ul>
+							<li>Cart</li>
+							<li>></li>
+							<li>Customer information</li>
+							<li>></li>
+							<li>Shipping method</li>
+							<li>></li>
+							<li>Payment method</li>
+						</ul>
+					</div>  
+					<div class="layout-flex">
+						<span>Contact information</span>
+						<p> Already have an account? <a href="">Log in</a></p>
+						<div class="null"></div>
+					</div>
+					<div class="input-wrapper">
+						<label >Email</label><br />
+						<input type="text" placeholder="email" />
+					</div>
+					<div class="checkboxput">
+						<input type="checkbox"id="checkup" />
+						<span >Keep me up to date on news and exclusive offers</span>
+					</div>
+					<div class="sectieader">
+				      <span class="sectitle">Shipping address</span>
+				    </div>
+				    <div class="fierapper">
+				    	<input type="text" id="fieerinput" placeholder="Company (optional)"/>
+				    </div>
+				    <div class="fiealf">
+				    	<div class="Lastnamlfe" >
+				    		<input type="text" class="Lastname" placeholder="Last name" />
+				    	</div>
+				    	
+				    	<div class="Lastnamlfef" >
+				    		<input type="text" class="Firstname" placeholder="First name" />
+				    	</div>
+				    	<div class="null"></div>
+				    </div>
+				  
+				    <div class="fierappers">
+				    	<input type="text" id="fieerinput" placeholder="Postal code"/>
+				    </div>
+				    
+				    <div class="input-wrappers">
+						<label >Email</label><br />
+						<select>
+						 <option data-code="US" value="United States">United States</option>
+						 <option data-code="HK" value="Hong Kong">Hong Kong SAR China</option>
+						 <option data-code="CN" value="China">China</option>
+						 <option data-code="MY" value="Malaysia">Malaysia</option>
+						 <option disabled="disabled" value="---">---</option>
+						 <option data-code="AF" value="Afghanistan">Afghanistan</option>
+						</select>
+					</div>
+					
+					 <div class="fiealf">
+				    	<div class="Lastnamlfes" >
+				    		<select>
+							 <option data-code="US" value="United States">United States</option>
+							 <option data-code="HK" value="Hong Kong">Hong Kong SAR China</option>
+							 <option data-code="CN" value="China">China</option>
+							 <option data-code="MY" value="Malaysia">Malaysia</option>
+							 <option disabled="disabled" value="---">---</option>
+							 <option data-code="AF" value="Afghanistan">Afghanistan</option>
+							</select>
+				    	</div>
+				    	
+				    	<div class="Lastnamlfefs" >
+				    		<input type="text" class="Firstname" placeholder="City" />
+				    	</div>
+				    	<div class="null"></div>
+				    </div>
+				    
+				    <div class="fierappers">
+				    	<input type="text" class="fieerinputs" placeholder="Address"/>
+				    </div>
+				    
+				    <div class="fierappers">
+				    	<input type="text" class="fieerinputs" placeholder="Apartment, suite, etc. (optional)"/>
+				    </div>
+				    
+				    <div class="fierappers">
+				    	<input type="text" class="fieerinputs" placeholder="Phone"/>
+				    </div>
+				    
+				    <div class="checkboxput">
+						<input type="checkbox"id="checkup" />
+						<span >Save this information for next time</span>
+					</div>
+					
+					<div class="steooter">
+						<a href=""><span ><</span><span>Return to cart</span></a>
+						<a href="payment.html"><button>Continue to shipping method</button></a>
+						<div class="null"></div>
+					</div>
+					<div class="mtersas">
+						<ul>
+							<li>Refund policy</li>
+							<li>Privacy policy</li>
+							<li>Terms of service</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="sidebar">
+				<div class="ordeontent">
+					<div class="properimg">
+						<img src="img/IMGall.jpg" width="100%" height="100%"/>
+					</div>
+					<div class="prosttion">
+						<span class="OGFCL">OG-154CL Tab</span>
+						<br />
+						<span id="USsize">US 8</span>
+					</div>
+					<div class="prodrice">
+						<span id="">$1,400.00 HKD</span>
+					</div>
+				</div>
+				
+				<div class="ordeontents">
+					<span id="spana">Subtotal</span>
+					<span id="spanb">$1,400.00 HKD</span><br />
+					<span id="spanc">Shipping</span>
+					<span id="spand">——</span>
+				</div>
+				<div class="TotaHKD">
+					<span id="TotaHKDa">Total</span>
+					<span id="TotaHKDb">:</span>
+					<span id="TotaHKDc">$1,400.00 HKD</span>
+				</div>
+				
+			</div>
+			<div class="null"></div>
+		</div>
+		
+	</body>
+</html>

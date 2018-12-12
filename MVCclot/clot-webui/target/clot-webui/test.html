@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>table模块快速使用</title>
+		<link rel="stylesheet" href="./plugins/layui/css/layui.css" media="all">
+
+		<style type="text/css">
+
+
+			.layui-table td{
+				height: 161px;
+			}
+			.laytable-cell-1-cyphotoa,.laytable-cell-1-cyphotob{
+				width: 100px !important;
+
+			}
+
+			.layui-table-body .laytable-cell-1-cyphotoa:nth-child(1){
+				height: 100px;
+			}
+
+			.layui-table-body .laytable-cell-1-cyphotob:nth-child(1){
+				height: 100px;
+			}
+
+			.layui-table img {
+				height: 100%;
+				/*width: 100%;*/
+				max-width: none;
+				object-fit: cover;
+			}
+
+			#CRUD{
+				/*width: 100%;*/
+				/*height: 30px;*/
+				/*margin: 10px 0 20px 0;*/
+			}
+
+		</style>
+
+	</head>
+
+	<body>
+		<script type="text/html" id="barDemo">
+			<a class="layui-btn layui-btn-primary layui-btn-xs" lay-event="detail">查看</a>
+			<a class="layui-btn layui-btn-xs" lay-event="edit">编辑</a>
+			<a class="layui-btn layui-btn-danger layui-btn-xs" lay-event="del">删除</a>
+		</script>
+
+
+        <button class="layui-btn layui-btn-sm layui-btn-normal" id="btnAdd" data-type="auto">添加</button>
+
+
+
+		<div id="CRUD" hidden="hidden">
+
+            <form class="layui-form" action="">
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">品牌</label>
+                    <div class="layui-input-inline">
+                        <select id="combrandid" name="city" lay-verify="required">
+                            <option value ="1">adidas</option>
+                            <option value ="2">AiE</option>
+                            <option value ="3">Bata Heritage</option>
+                            <option value ="4">Black Weirdos</option>
+                            <option value ="5">Brain Dead</option>
+                            <option value ="6">Carrots</option>
+                            <option value ="7">Chinatown Market</option>
+                            <option value ="8">United Standard</option>
+                            <option value ="9">CLOT</option>
+                            <option value ="10">FOG ESSENTIALS</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">类型</label>
+                    <div class="layui-input-inline">
+                        <select id="comtypekid" name="city" lay-verify="required">
+                            <option value ="1">1</option>
+                            <option value ="2">2</option>
+                            <option value ="3">3</option>
+                            <option value ="4">4</option>
+                            <option value ="5">5</option>
+                            <option value ="6">6</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">颜色</label>
+                    <div class="layui-input-inline">
+                        <select id="comcolorid" name="city" lay-verify="required">
+                            <option value ="1">1</option>
+                            <option value ="2">2</option>
+                            <option value ="3">3</option>
+                            <option value ="4">4</option>
+                            <option value ="5">5</option>
+                            <option value ="6">6</option>
+                            <option value ="7">7</option>
+                            <option value ="8">8</option>
+                            <option value ="9">9</option>
+                            <option value ="10">10</option>
+                            <option value ="11">11</option>
+                            <option value ="12">12</option>
+                            <option value ="13">13</option>
+                            <option value ="14">14</option>
+                            <option value ="15">15</option>
+                            <option value ="16">16</option>
+                            <option value ="17">17</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">名称</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="comname" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <label class="layui-form-label">价格</label>
+                    <div class="layui-input-inline">
+                        <input type="text" id="comprice" required  lay-verify="required" placeholder="请输入标题" autocomplete="off" class="layui-input">
+                    </div>
+                </div>
+                <div class="layui-input-block">
+                    <div class="layui-upload">
+                        <button type="button" class="layui-btn" id="test1">上传图片</button>
+                        <div class="layui-upload-list">
+                            <img class="layui-upload-img" id="demo1" style="width: 150px;height: 150px;border: 1px solid black">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-input-block">
+                    <div class="layui-upload">
+                        <button type="button" class="layui-btn" id="test2">上传图片</button>
+                        <div class="layui-upload-list">
+                            <img class="layui-upload-img" id="demo2" style="width: 150px;height: 150px;border: 1px solid black">
+                        </div>
+                    </div>
+                </div>
+                <div class="layui-form-item layui-form-text">
+                    <label class="layui-form-label">详细</label>
+                    <div class="layui-input-block">
+                        <textarea id="comphotob" placeholder="请输入内容" class="layui-textarea"></textarea>
+                    </div>
+                </div>
+
+                <div class="layui-form-item">
+                    <div class="layui-input-block">
+                        <input type="button" id="submission" class="layui-btn" lay-filter="formDemo" value="立即提交">
+                        <input type="reset" class="layui-btn layui-btn-primary" value="重置"></input>
+                    </div>
+                </div>
+
+            </form>
+
+		</div>
+
+
+        <button id="TextADD" class="layui-btn layui-btn-sm layui-btn-normal">文本添加</button>
+
+        <div id="Textaddition" style="display: none">
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">品牌</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addbrandid" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">类型</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addtypeid" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">颜色</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addcolor" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">名称</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addnames" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">价格</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addprice" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">正面图片</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addhotoa" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">反面图片</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="addphotob" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+
+            <div class="layui-form-item">
+                <label class="layui-form-label">详细</label>
+                <div class="layui-input-inline">
+                    <input class="layui-input" id="adddetails" type="text" lay-verify="required" placeholder="请输入标题">
+                </div>
+            </div>
+            <!--<input type="button" value="确定" onclick="add()">-->
+        </div>
+        
+        
+		<table class="layui-table" lay-data="{height:315, url:'commodity/selectCyList', page:true, id:'test',height: 'full-25',limits:[3,10]}" lay-filter="test" id="test">
+			<thead>
+				<tr>
+					<th lay-data="{type: 'checkbox',height:177, fixed: 'left'}"></th>
+					<th lay-data="{field:'cynumber', width:80, sort: true}">ID</th>
+					<th lay-data="{field:'commoditybrand', width:80,templet: '<div>{{d.commoditybrand.brandname}}</div>'}">品牌</th>
+					<th lay-data="{field:'cytypeid', width:80, sort: true,templet: '<div>{{d.commoditytype.typename}}</div>'}">类型</th>
+					<th lay-data="{field:'cycolorid', width:80 ,templet: '<div>{{d.commoditycolor.colorname}}</div>'}">颜色</th>
+					<th lay-data="{field:'cyname', width:177}">名称</th>
+					<th lay-data="{field:'cyprice', width:80, sort: true}">价格</th>
+					<th lay-data="{field:'cyphotoa', width:80, sort: true,templet:'<div><img  src=\'img/{{d.cyphotoa}}\' /></div>'}">正面</th>
+					<th lay-data="{field:'cyphotob', width:135, sort: true,templet:'<div><img  src=\'img/{{d.cyphotob}}\' /></div>'}">反面</th>
+					<th lay-data="{field:'cydetails', width:80}">详细</th>
+					<th lay-data="{fixed: 'right', width: 165, align:'center', toolbar: '#barDemo'}">操作</th>
+				</tr>
+			</thead>
+		</table>
+
+		
+	</body>
+
+
+	<script src="./plugins/layui/layui.js"></script>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/dialog.js"></script>
+    <script>
+        layui.use('table', function() {
+            var table = layui.table;
+
+
+            //监听头工具栏事件
+            table.on('toolbar(test)', function(obj){
+                var checkStatus = table.checkStatus(obj.config.id)
+                    ,data = checkStatus.data; //获取选中的数据
+                switch(obj.event){
+                    case 'add':
+                        layer.msg('添加');
+                        break;
+                    case 'update':
+                        if(data.length === 0){
+                            layer.msg('请选择一行');
+                        } else if(data.length > 1){
+                            layer.msg('只能同时编辑一个');
+                        } else {
+                            layer.alert('编辑 [id]：'+ checkStatus.data[0].id);
+                        }
+                        break;
+                    case 'delete':
+                        if(data.length === 0){
+                            layer.msg('请选择一行');
+                        } else {
+                            layer.msg('删除');
+                        }
+                        break;
+                };
+            });
+
+            //监听行工具事件
+            table.on('tool(test)', function(obj){ //注：tool 是工具条事件名，test 是 table 原始容器的属性 lay-filter="对应的值"
+                var data = obj.data //获得当前行数据
+                    ,layEvent = obj.event; //获得 lay-event 对应的值
+                if(layEvent === 'detail'){
+                    layer.msg('查看操作');
+                } else if(layEvent === 'del'){
+                    layer.confirm('真的删除行么', function(index){
+
+                        console.log(data.cynumber);
+
+                        $.ajax({
+                            url:"commodity/delete",
+                            type:"post",
+                            data:{
+                                cynumber:data.cynumber
+                            },
+                            success:function (data) {
+                               if (data.code==1){
+                                   obj.del();
+                                   layer.close(index);
+
+                               }
+                            }
+                        })
+
+
+                        // obj.del(); //删除对应行（tr）的DOM结构
+                        // layer.close(index);
+                        //向服务端发送删除指令
+                    });
+                } else if(layEvent === 'edit'){
+                    layer.msg('编辑操作');
+                }
+            });
+        });
+
+        $("#btnAdd").click(function() {
+
+            //通过这种方式弹出的层，每当它被选择，就会置顶。
+            layer.open({
+                type: 1,
+                shade: [0.4, '#393D49'],
+                area: ['600px', '500px'],
+                maxmin: true,
+                content: $("#CRUD"),
+                zIndex: layer.zIndex, //重点1
+                success: function(layero) {
+                    layer.setTop(layero); //重点2
+                },
+                btn: ['按钮一', '按钮二', '按钮三'],
+                yes: function(index, layero) {
+                    //按钮【按钮一】的回调
+                },
+                btn2: function(index, layero) {
+                    //按钮【按钮二】的回调
+
+                    //return false 开启该代码可禁止点击该按钮关闭
+                },
+                btn3: function(index, layero) {
+                    //按钮【按钮三】的回调
+
+                    //return false 开启该代码可禁止点击该按钮关闭
+                },
+                cancel: function() {
+                    //右上角关闭回调
+
+                    //return false 开启该代码可禁止点击该按钮关闭
+                }
+            });
+
+        });
+
+
+
+
+
+    </script>
+    <script>
+        layui.use('upload', function(){
+            var $ = layui.jquery,
+                upload = layui.upload;
+
+            //普通图片上传
+            var uploadInst1 = upload.render({
+                elem: '#test1'
+                ,url: 'UploadFile'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#demo1').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code > 0){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    layer.msg(res.msg);
+                    positive=res.data.name;
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    var demoText = $('#demoText1');
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+            var uploadInst2 = upload.render({
+                elem: '#test2'
+                ,url: 'UploadFile'
+                ,before: function(obj){
+                    //预读本地文件示例，不支持ie8
+                    obj.preview(function(index, file, result){
+                        $('#demo2').attr('src', result); //图片链接（base64）
+                    });
+                }
+                ,done: function(res){
+                    //如果上传失败
+                    if(res.code > 0){
+                        return layer.msg('上传失败');
+                    }
+                    //上传成功
+                    layer.msg(res.msg);
+                    opposite=res.data.name
+                }
+                ,error: function(){
+                    //演示失败状态，并实现重传
+                    demoText.html('<span style="color: #FF5722;">上传失败</span> <a class="layui-btn layui-btn-mini demo-reload">重试</a>');
+                    demoText.find('.demo-reload').on('click', function(){
+                        uploadInst.upload();
+                    });
+                }
+            });
+        });
+
+        $("#submission").click(function () {
+            // console.log($("#combrandid").val());
+            // console.log($("#comtypekid").val());
+            // console.log($("#comcolorid").val());
+            // console.log($("#comname").val());
+            // console.log($("#comprice").val());
+            // console.log(positive);
+            // console.log(opposite);
+            // console.log($("#comphotob").val());
+
+            $.ajax({
+                url:"commodity/insertCommdityList",
+                data:{
+                    "cybrandid":$("#combrandid").val(),
+                    "cytypeid":$("#comtypekid").val(),
+                    "cycolorid":$("#comcolorid").val(),
+                    "cyname":$("#comname").val(),
+                    "cyprice":$("#comprice").val(),
+                    "cyphotoa":positive,
+                    "cydetails":$("#comphotob").val(),
+                    "cyphotob":opposite
+                },
+                type:"post",
+                success:function (rel) {
+                    alert(rel +"添加成功");
+                },error:function (rel) {
+                    alert(rel +"添加成功");
+                }
+
+            });
+
+        });
+
+
+    </script>
+
+
+    //添加
+    <script >
+        function add () {
+            // var com={
+            //     "cybrandid":$("#addbrandid").val(),
+            //     "cytypeid":$("#addtypeid").val(),
+            //     "cycolorid":$("#addcolor").val(),
+            //     "cyname":$("#addnames").val(),
+            //     "cyprice":$("#addprice").val(),
+            //     "cyphotoa":$("#addhotoa").val(),
+            //     "cydetails":$("#adddetails").val(),
+            //     "cyphotob":$("#addphotob").val(),
+            // };
+            $.ajax({
+                url:"commodity/insertCommdityList",
+                data:{
+                    "cybrandid":$("#addbrandid").val(),
+                    "cytypeid":$("#addtypeid").val(),
+                    "cycolorid":$("#addcolor").val(),
+                    "cyname":$("#addnames").val(),
+                    "cyprice":$("#addprice").val(),
+                    "cyphotoa":$("#addhotoa").val(),
+                    "cydetails":$("#adddetails").val(),
+                    "cyphotob":$("#addphotob").val()
+                },
+                type:"post",
+                success:function (rel) {
+                    alert(rel+"添加成功");
+                },error:function (rel) {
+                    alert(rel+"添加失败");
+                }
+            });
+        }
+    </script>
+
+
+    //文本添加
+    <script>
+        $("#TextADD").on("click",function(){
+
+            var T = dialog({
+                title:"文本添加",
+                content:document.getElementById("Textaddition"),
+                okValue:"添加",
+                ok:function(){
+                    $.ajax({
+                        url:"commodity/insertCommdityList",
+                        data:{
+                            "cybrandid":$("#addbrandid").val(),
+                            "cytypeid":$("#addtypeid").val(),
+                            "cycolorid":$("#addcolor").val(),
+                            "cyname":$("#addnames").val(),
+                            "cyprice":$("#addprice").val(),
+                            "cyphotoa":$("#addhotoa").val(),
+                            "cydetails":$("#adddetails").val(),
+                            "cyphotob":$("#addphotob").val()
+                        },
+                        type:"post",
+                        success:function (rel) {
+                            alert(rel+"添加成功");
+                        },error:function (rel) {
+                            alert(rel+"添加失败");
+                        }
+                    });
+                },
+                cancelValue:"取消",
+                cancel:function(){
+
+                }
+
+            });
+            T.show();
+        })
+    </script>
+</html>

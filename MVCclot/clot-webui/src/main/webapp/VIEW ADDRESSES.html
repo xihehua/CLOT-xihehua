@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			body{
+				font: 14px Helvetica,Arial,sans-serif;
+			}
+		
+			.AddressNewForm{
+				width: 588px;
+				height: 988px;
+				
+
+			}
+			
+			.AddressNewForm h2{
+			    font-size: 24px;
+    			line-height: 32px;
+    			
+    			margin: 0 0 24px;
+				font-family: SuisseIntl-Regular-WebS,sans-serif;
+				font-style: normal;
+				font-weight: 600;
+				overflow-wrap: break-word;
+				word-wrap: break-word;
+				text-transform: uppercase;
+				letter-spacing: normal;
+			}
+			.grid{
+			   width: 588px;
+			   height: 98px;
+
+			}
+			.grid .half {
+			    width: 290px;
+			    height: 98px;
+			    float: left;
+			}
+			label{
+				display: block;
+				margin-bottom: 5px;
+				cursor: pointer;
+				touch-action: manipulation;
+				font-size: 17px;
+			    font-family: SuisseIntl-Regular-WebS,sans-serif;
+			    font-style: normal;
+			    font-weight: 400;
+			    color: #0f0303;
+			    line-height: 1.5;
+			}
+			.grid .half .AddressFirstNameNew,.AddressLastNameNew{
+				display: block;
+			    width: 73%;
+			    margin-bottom: 26.66667px;
+		        padding: 10px 18px;
+			}
+			input{
+				border: 1px solid rgba(15,3,3,0.85);
+			    background-color: #fff;
+			    color: #000;
+			    max-width: 100%;
+			    line-height: 1.2;
+			    border-radius: 0;
+		        font-size: 17px;
+			    font-family: SuisseIntl-Regular-WebS,sans-serif;
+			    font-style: normal;
+			    font-weight: 400;
+			}
+			
+			.grida{
+				width: 590px;
+				height: 295px;
+
+
+			}
+			.grida input{
+				width: 92%;
+				height: 42px;
+				margin-bottom: 5px;
+			}
+			.checkboxs{
+				width: 588px;
+				height: 40px;
+				
+				background: lavenderblush;
+			}
+			#addnewbox{
+				float: left;
+				margin-right: 13px;
+			}
+			#Setas{
+				display: inline-block;
+				margin-top: -4px;
+			}
+			.subbut{
+				width: 588px;
+				height: 46px;
+			}
+			.subbut input{
+				width: 100%;
+				height: 46px;
+				background-color: #000000;
+				color: #FFFFFF;
+			    font-family: SuisseIntl-Regular-WebS,sans-serif;
+			    text-transform: uppercase;/*字体全部大写*/
+   				letter-spacing: 0.08em;/*字体间隔*/
+			}
+			.acancel {
+				width: 100px;
+				height: 20px;
+				
+				margin: 20px auto;
+			}
+			.acancel a{
+				color: #000000;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body style="overflow-x:hidden;overflow-y:hidden;">
+		<div class="AddressNewForm">
+			<h2>Add a New Address</h2>
+			
+			<div class="grid">
+                <div class="half">
+                  <label class="AddressFirstNw">First Name</label>
+                  <input type="text" class="AddressFirstNameNew" name="address[first_name]" value="">
+                </div>
+
+                <div class="half">
+                  <label class="AddressLastNw">Last Name</label>
+                  <input type="text" class="AddressLastNameNew" name="address[last_name]" value="">
+                </div>
+                
+                <div class="null" style="clear: both;"></div>
+            </div>
+            
+            <div class="grida">
+                <div class="grid__item">
+                  <label for="AddressCompanyNew">Company</label>
+                  <input type="text"  name="address[company]" value="">
+
+                  <label for="AddressAddress1New">Address1</label>
+                  <input type="text"  name="address[address1]" value="">
+
+                  <label for="AddressAddress2New">Address2</label>
+                  <input type="text"  name="address[address2]" value="">
+                </div>
+            </div>
+              
+          	<div class="grid">
+            	<div class="half">
+             		<label class="AddressFirstNw">First Name</label>
+                	<input type="text" class="AddressFirstNameNew" name="address[first_name]" value="">
+            	</div>
+
+	            <div class="half">
+	              	<label class="AddressLastNw">Last Name</label>
+	              	<input type="text"  name="address[last_name]" value="">
+	            </div>
+            
+           	 	<div class="null" style="clear: both;"></div>
+            </div>
+            
+             <div class="grida">
+                <div class="grid__item">
+                  <label for="AddressCompanyNew">Company</label>
+                  <input type="text" id="AddressCompanyNew" name="address[company]" value="">
+
+                  <label for="AddressAddress1New">Address1</label>
+                  <input type="text" id="AddressAddress1New" name="address[address1]" value="">
+
+                  <label for="AddressAddress2New">Address2</label>
+                  <input type="text" id="AddressAddress2New" name="address[address2]" value="">
+                </div>
+            </div>
+            
+            <div class="checkboxs">
+            	<input type="checkbox" id="addnewbox" name="address[default]" value="1">
+            	<label id="Setas">Set as default address</label>
+            	<div class="null" style="clear: both;"></div>
+            </div>
+            
+            <div class="subbut"><input type="submit" class="btn" value="Add Address"></div>
+            
+            <div class="acancel"><a href="">Cancel</a></div>
+		</div>
+		
+	</body>
+</html>

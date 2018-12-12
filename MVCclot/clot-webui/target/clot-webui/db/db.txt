@@ -1,0 +1,53 @@
+CREATE TABLE Commodity
+(
+    Commnumber int  PRIMARY KEY AUTO_INCREMENT,
+    Commname varchar(100)  NOT NULL,
+    Commprice int  NOT NULL,
+    Commpicture varchar(255)  NOT NULL,
+    Commsize varchar(100)  NOT NULL,
+    Information varchar(255)  NOT NULL,
+    Typeid int  NOT NULL
+);
+
+
+CREATE TABLE `Commoditytype`
+(
+    Typeid int PRIMARY KEY AUTO_INCREMENT,
+    Typename varchar(200) NOT NULL
+);
+
+
+CREATE TABLE commoditylist
+(
+    Cynumber int PRIMARY KEY AUTO_INCREMENT,
+    Cybrandid int,
+    Cytypeid int,
+    Cycolorid int,
+    Cyname varchar(255),
+    Cyprice int,
+    Cyphoto text,
+    Cydetails text,
+    CONSTRAINT commoditylist_commoditytype_Typeid_fk FOREIGN KEY (Cytypeid) REFERENCES commoditytype (Typeid),
+    CONSTRAINT commoditylist_commoditycolor_Colorid_fk FOREIGN KEY (Cycolorid) REFERENCES commoditycolor (Colorid),
+    CONSTRAINT commoditylist_commoditybrand_Brandid_fk FOREIGN KEY (Cybrandid) REFERENCES commoditybrand (Brandid)
+);
+
+
+
+
+
+
+
+
+
+CREATE TABLE Commoditylist
+(
+    Cylistid int PRIMARY KEY AUTO_INCREMENT,
+    CyBrandid int NOT NULL,
+    CyTypeid int NOT NULL,
+    CyColorid int NOT NULL,
+    CyName varchar(200) NOT NULL,
+    CyPrice int NOT NULL,
+    CyPhoto text,
+    CyDetails text NOT NULL
+);

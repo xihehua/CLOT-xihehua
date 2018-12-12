@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1,user-scalable=no">
+		<meta charset="UTF-8">
+		<title>Account-CLOT</title>
+		<link rel="shortcut icon" href="img/logo.png" type="image/x-icon" />
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-6a2b85cd/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="css/Login.css"/>
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-494f5ca2/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="fontello/fontello-1984ddce/css/menu.css"/>
+		<link rel="stylesheet" type="text/css" href="layui/css/layui.css"/>
+		<style type="text/css">
+			@font-face {
+				font-family: Druk Web; /*这里是说明调用来的字体名字*/
+				src: url('fontello/Druk-Medium-Web.woff.ttf'); /*这里是字体文件路径*/
+			}
+		</style>
+		<style type="text/css">
+			
+			/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/ 
+			::-webkit-scrollbar { 
+			    width: 8px; 
+			    height: 8px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滚动条轨道 内阴影+圆角*/ 	
+			::-webkit-scrollbar-track { 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+			    border-radius: 10px; 
+			    background-color: #F5F5F5; 
+			} 
+			   
+			/*定义滑块 内阴影+圆角*/ 
+			::-webkit-scrollbar-thumb { 
+			    border-radius: 10px; 
+			    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3); 
+			    background-color: #555; 
+			} 
+		</style>
+		<style type="text/css">
+			.layui-tab {
+			    width: 500px;
+			    height: 720px;
+			}
+			.layui-tab-card>.layui-tab-title li {
+			    width: 222px;
+			    font-weight: 800;
+			    font-size: 15px;
+			}
+			.layui-tab-title .layui-this:after {
+			    height: 60px;
+			}
+			.layui-tab-card>.layui-tab-title {
+			    height: 60px;
+			}
+			.layui-tab-card>.layui-tab-title .layui-this {
+			    height: 61px;
+			}
+			.layui-tab-title li {
+			    line-height: 60px;
+			}
+			.layui-tab {
+				margin-top: 0px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="fjAlls">
+			<!--页面顶部开始-->
+			<div class="header-top-con">
+			<!--菜单按钮'三'-->
+			<div class="header-mobile-buttons" id="mbbu">
+				<div class="butts">
+					<span id="caidan" class="icon-menu"></span>
+				</div>
+				
+				<div class="header-nav-menu-dropdown" id="child">
+					<div class="footecol-max8">
+						<div class="footemaxa">
+							<img src="img/footer_link_about--white.png" width="197px"height="94px" id="footemaxa"/>
+						</div>
+						<div class="footemaxb">
+							<img src="img/shipping--white.png" width="197px"height="94px" id="footemaxb"/>
+						</div>
+						<div class="footemaxc">
+							<img src="img/orders--white.png" width="197px"height="94px" id="footemaxc"/>
+						</div>
+						<div class="footemaxd">
+							<img src="img/returns--white.png" width="197px"height="94px" id="footemaxd"/>
+						</div>
+						<div class="footemaxe">
+							<img src="img/juice--white.png" width="197px"height="94px" id="footemaxe"/>
+						</div>
+						<div class="footemaxf">
+							<img src="img/faq--white.png" width="197px"height="94px" id="footemaxf"/>
+						</div>
+						<div class="footemaxg">
+							<img src="img/contact--white.png" width="197px"height="94px" id="footemaxg"/>
+						</div>
+						<div class="footemaxh">
+							<img src="img/joinus--white.png" width="197px"height="94px" id="footemaxh"/>
+						</div>
+					</div>
+					
+					<div class="footer-bottom-inner">
+						<h4>Get Updates!</h4>
+						<div class="footer-div">
+							<input type="text" placeholder="EMAIL"; class="footer-inputa" />
+							<input type="button" class="footer-inputb" value="SIGN UP" />
+						</div>
+						<div class="footer-socials">
+							<span class="icon-facebook-rect"></span>
+							<span class="icon-instagram"></span>
+							<span class="icon-youtube-play"></span>
+							<span class="icon-soundcloud"></span>
+							<span class="icon-weibo"></span>
+							<span class="icon-wechat"></span>
+						</div>
+					</div>
+					
+					<div class="null"></div>
+				</div>
+			</div>
+			
+			<!--菜单按钮'三'结束-->
+			
+			
+			<div class="header-text-con">
+				<ul class="header-text-ul">
+					<li class="header-text-li"><a href="shop.html">SHOP</a></li>
+					<li class="header-text-li"><a href="editorial.html">COLLECTIONS</a></li>
+					<li class="header-text-li see">DISCOVER
+					<div class="seediv">
+						<div class="medium-up">
+							<div class="lookbook-dropdown">
+								<span id="pres">PRESENTING CLOT'S FALL/WINTER 2018 "CLOTOPIA" COLLECTION</span>
+							</div>
+							<div class="collection-grid-item">
+								<img class="collection-grid-box" src="img/0_540x.jpg" width="100%" height="100%"></img> 	
+							</div>
+						</div>
+						
+						<div class="medium-up">
+							<div class="lookbook-dropdown">
+								<span id="pres">STOCK UP ON FEAR OF GOD ESSENTIALS' LINE OF BASKETBALL-INSPIRED BASICS</span>
+							</div>
+							<div class="collection-grid-item">
+								<img class="collection-grid-box" src="img/clot-juice-fear-of-god-essentials-1-4_540x.jpg" width="100%" height="100%"></img> 	
+							</div>
+						</div>
+						
+						<div class="medium-up">
+							<div class="lookbook-dropdown">
+								<span id="pres">CLOTTEE'S AUTUMN 2018 COLLECTION IS "BATTLE ROYALE" BROUGHT TO LIFE</span>
+							</div>
+							<div class="collection-grid-item">
+								<img class="collection-grid-box" src="img/clottee-battle-royale-fw-18-1-1_540x.jpg" width="100%" height="100%"></img> 	
+							</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+			</div>
+			
+			<div class="header-logo-con">
+				<a href="CLOT.html"><img src="img/logo.png" width="36px" height="38px"/></a>
+			</div>
+			
+			<div class="header-right-con">
+				<div class="header-MLC">
+					<div class="header-right-music">
+						<g>i</g>Music
+					</div>
+					<div class="header-right-login">
+						<a href="login.html">Login</a>
+						
+					</div>
+					<div class="header-right-cny">
+						<a href="account.html">CNY</a><img src="img/shangjiao.png" width="16px"height="16px" />
+					</div>
+					<div class="null" style="clear: both;"></div>
+				</div>
+				
+				
+				<div class="header-country-trigger">
+					<div class="butts">
+						<span id="caidan" class="icon-globe"></span>
+					</div>
+				</div>
+				<div class="header-country-search">
+					<div class="butts">
+						<span id="caidan" class="icon-search"></span>
+					</div>
+				</div>
+				<div class="header-country-wishlist">
+					<div class="butts">
+						<span id="caidan" class="icon-heart"></span>
+					</div>
+				</div>
+				<div class="header-country-each">
+					<a href="shopping cart.html">
+						<div class="butts">
+							<span id="caidan" class="icon-shopping-bag"></span>
+						</div>
+					</a>
+				</div>
+			</div>
+			
+			<div class="null" ></div>
+		</div>
+			<!--页面顶部结束-->
+		
+		<!--登录框开始-->
+		<div class="login-con">
+			<div class="login-content">
+				<div class="layui-tab layui-tab-card">
+				  <ul class="layui-tab-title">
+				    <li >NEW TO CLOT?</li>
+				    <li class="layui-this">LOG IN</li>
+				    
+				  </ul>
+				  <div class="layui-tab-content" style="height: 100px;">
+				    <div class="layui-tab-item layui-show">
+				    	
+				    	<div class="login-header">SIGN ME UP</div>
+				    	
+				    	<div class="global-form-each">
+							<input type="text" id="Firstname" class="global-form" placeholder="First Name" />
+						</div>
+						<div class="global-form-eacha">
+							<input type="text" id="Lastname" class="global-forma" placeholder="Last Name" />
+						</div>
+						<div class="global-form-each">
+							<input type="text" id="Email" class="global-form" placeholder="Email Address" />
+						</div>
+						<div class="global-form-eacha">
+							<input type="password" id="Pamssword" class="global-forma" placeholder="Pamssword" />
+						</div>
+						
+						<div class="global-but-block" id="btnadd">CREATE ACCOUNT</div>
+						
+						<div class="global-customer_login"></div>
+						
+						<p id="oyclwp">Or you can login with:</p>
+						
+						<div class="social_facebook">
+							<span id="sofacebook">Facebook</span>
+							<span id="icon-book" class="icon-facebook-1"></span>
+						</div>
+						
+						<div class="social_facebook">
+							<span id="sofacebook">Google</span>
+							<span id="icon-book" class="icon-google"></span>
+						</div>
+						<div class="social_facebook">
+							<span id="sofacebook">Twitter</span>
+							<span id="icon-book" class="icon-twitter"></span>
+						</div>
+						
+						
+						<div class="null"></div>
+				    	
+				    </div>
+				    <div class="layui-tab-item">
+				    	<div class="global-form-each">
+							<input type="text" id="Loginemail" class="global-form" placeholder="name@email.com" />
+						</div>
+						<div class="global-form-eacha">
+							<input type="password" id="Loginpamssword" class="global-forma" placeholder="Pamssword" />
+						</div>
+				
+						<div id="login" class="global-but-block">LOGIN</div>
+				
+						<a href="#" class="global-text-link" id="forgot-link">Forgot password?</a>
+						
+						<div class="global-customer_login"></div>
+						
+						<p id="oyclwp">Or you can login with:</p>
+						
+						<div class="social_facebook">
+							<span id="sofacebook">Facebook</span>
+							<span id="icon-book" class="icon-facebook-1"></span>
+						</div>
+						
+						<div class="social_facebook">
+							<span id="sofacebook">Google</span>
+							<span id="icon-book" class="icon-google"></span>
+						</div>
+						<div class="social_facebook">
+							<span id="sofacebook">Twitter</span>
+							<span id="icon-book" class="icon-twitter"></span>
+						</div>
+						
+						
+						<div class="null"></div>
+				    </div>
+				    
+				  </div>
+				</div>
+				
+				
+			</div>
+		</div>
+		<!--登录框结束-->
+		
+		<!--底部开始-->
+		<div class="shopify-section-footer">
+			<div class="header-nav-menu-dropdownb" id="child">
+				<div class="footecol-max8">
+					<div class="footemaxaa">
+						<img src="img/footer_link_about--white.png" width="197px"height="94px" id="footemaxaa"/>
+					</div>
+					<div class="footemaxbb">
+						<img src="img/shipping--white.png" width="197px"height="94px" id="footemaxbb"/>
+					</div>
+					<div class="footemaxcc">
+						<img src="img/orders--white.png" width="197px"height="94px" id="footemaxcc"/>
+					</div>
+					<div class="footemaxdd">
+						<img src="img/returns--white.png" width="197px"height="94px" id="footemaxdd"/>
+					</div>
+					<div class="footemaxee">
+						<img src="img/juice--white.png" width="197px"height="94px" id="footemaxee"/>
+					</div>
+					<div class="footemaxff">
+						<img src="img/faq--white.png" width="197px"height="94px" id="footemaxff"/>
+					</div>
+					<div class="footemaxgg">
+						<img src="img/contact--white.png" width="197px"height="94px" id="footemaxgg"/>
+					</div>
+					<div class="footemaxhh">
+						<img src="img/joinus--white.png" width="197px"height="94px" id="footemaxhh"/>
+					</div>
+				</div>
+				
+				<div class="footer-bottom-inner">
+					<h4>Get Updates!</h4>
+					<div class="footer-div">
+						<input type="text" placeholder="EMAIL"; class="footer-inputa" />
+						<input type="button" class="footer-inputb" value="SIGN UP" />
+					</div>
+					<div class="footer-socials">
+						<span class="icon-facebook-rect"></span>
+						<span class="icon-instagram"></span>
+						<span class="icon-youtube-play"></span>
+						<span class="icon-soundcloud"></span>
+						<span class="icon-weibo"></span>
+						<span class="icon-wechat"></span>
+					</div>
+				</div>
+						<div class="null"></div>
+				<div class="footer-message">
+					<p>Copyright © 2018 CLOT 	
+						<a href="/pages/terms-of-use" class="footer-link">Terms of use</a>&nbsp;&nbsp;•&nbsp;&nbsp;
+						<a href="/pages/privacy-policy" class="footer-link">Privacy &amp; Cookies</a>
+					</p>
+				</div>
+				
+				<div class="null"></div>
+			</div>
+		</div>
+		
+		<!--底部结束-->
+		</div>
+	</body>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript" src="layui/layui.js"></script>
+	<script type="text/javascript">
+		var div=document.getElementById("mbbu");
+		var child=document.getElementById("child");
+		div.onmousemove=function(){
+			child.style.display="block";
+		}
+		div.onmouseout=function(){
+			child.style.display="none"
+		}
+		
+		var div=document.getElementById("footemaxa");
+		div.onmousemove = function(){
+			div.src="img/about--black.png"
+		}
+		div.onmouseout = function(){
+			div.src="img/about--white.png"
+		}
+		
+		var divb=document.getElementById("footemaxb");
+		divb.onmousemove = function(){
+			divb.src="img/shipping--black.png"
+		}
+		divb.onmouseout = function(){
+			divb.src="img/shipping--white.png"
+		}
+		
+		var divc=document.getElementById("footemaxc");
+		divc.onmousemove = function(){
+			divc.src="img/orders--black.png"
+		}
+		divc.onmouseout = function(){
+			divc.src="img/orders--white.png"
+		}
+		var divd=document.getElementById("footemaxd");
+		divd.onmousemove = function(){
+			divd.src="img/returns--black.png"
+		}
+		divd.onmouseout = function(){
+			divd.src="img/returns--white.png"
+		}
+		
+		var dive=document.getElementById("footemaxe");
+		dive.onmousemove = function(){
+			dive.src="img/juice--black.png"
+		}
+		dive.onmouseout = function(){
+			dive.src="img/juice--white.png"
+		}
+		
+		var divf=document.getElementById("footemaxf");
+		divf.onmousemove = function(){
+			divf.src="img/faq--black.png"
+		}
+		divf.onmouseout = function(){
+			divf.src="img/faq--white.png"
+		}
+		
+		var divg=document.getElementById("footemaxg");
+		divg.onmousemove = function(){
+			divg.src="img/contact--black.png"
+		}
+		divg.onmouseout = function(){
+			divg.src="img/contact--white.png"
+		}
+		
+		var divh=document.getElementById("footemaxh");
+		divh.onmousemove = function(){
+			divh.src="img/joinus--black.png"
+		}
+		divh.onmouseout = function(){
+			divh.src="img/joinus--white.png"
+		}
+		
+		
+		
+		var diva=document.getElementById("footemaxaa");
+		diva.onmousemove = function(){
+			diva.src="img/about--black.png"
+		}
+		diva.onmouseout = function(){
+			diva.src="img/about--white.png"
+		}
+		
+		var divbb=document.getElementById("footemaxbb");
+		divbb.onmousemove = function(){
+			divbb.src="img/shipping--black.png"
+		}
+		divbb.onmouseout = function(){
+			divbb.src="img/shipping--white.png"
+		}
+		
+		var divcc=document.getElementById("footemaxcc");
+		divcc.onmousemove = function(){
+			divcc.src="img/orders--black.png"
+		}
+		divcc.onmouseout = function(){
+			divcc.src="img/orders--white.png"
+		}
+		var divdd=document.getElementById("footemaxdd");
+		divdd.onmousemove = function(){
+			divdd.src="img/returns--black.png"
+		}
+		divdd.onmouseout = function(){
+			divdd.src="img/returns--white.png"
+		}
+		
+		var divee=document.getElementById("footemaxee");
+		divee.onmousemove = function(){
+			divee.src="img/juice--black.png"
+		}
+		divee.onmouseout = function(){
+			divee.src="img/juice--white.png"
+		}
+		
+		var divff=document.getElementById("footemaxff");
+		divff.onmousemove = function(){
+			divff.src="img/faq--black.png"
+		}
+		divff.onmouseout = function(){
+			divff.src="img/faq--white.png"
+		}
+		
+		var divgg=document.getElementById("footemaxgg");
+		divgg.onmousemove = function(){
+			divgg.src="img/contact--black.png"
+		}
+		divgg.onmouseout = function(){
+			divgg.src="img/contact--white.png"
+		}
+		
+		var divhh=document.getElementById("footemaxhh");
+		divhh.onmousemove = function(){
+			divhh.src="img/joinus--black.png"
+		}
+		divhh.onmouseout = function(){
+			divhh.src="img/joinus--white.png"
+		}
+	</script>
+	
+	<script>
+		layui.use('element', function(){
+		var element = layui.element;
+		  
+		//获取hash来切换选项卡，假设当前地址的hash为lay-id对应的值
+		var layid = location.hash.replace(/^#test1=/, '');
+		element.tabChange('test1', layid); //假设当前地址为：http://a.com#test1=222，那么选项卡会自动切换到“发送消息”这一项
+		  
+		//监听Tab切换，以改变地址hash值
+		element.on('tab(test1)', function(){
+			location.hash = 'test1='+ this.getAttribute('lay-id');
+			});
+		});
+	</script>
+
+	<script type="text/javascript">
+        $("#btnadd").click(function () {
+            //alert($("#Firstname").val()+$("#Lastname").val()+$("#Email").val()+$("#Pamssword").val());
+            $.ajax({
+                url:"commodity/addUser",
+                type:"post",
+                data:{firstname:$("#Firstname").val(),lastname:$("#Lastname").val(),emailaddress:$("#Email").val(),pamssword:$("#Pamssword").val()},
+                success:function (data) {
+                    if (data.code==1){
+                        alert("注册成功");
+                        location.href="login.html";
+                    }
+
+                }
+
+            })
+        });
+
+	</script>
+
+	<script type="text/javascript" language="JavaScript">
+        $(document).ready(function () {
+
+            $('#login').click(function () {
+                alert($("#Loginemail").val()+ $("#Loginpamssword").val());
+                $.ajax({
+                    url: "commodity/login_check",
+                    data: {
+                        "emailaddress": $("#Loginemail").val(),
+                        "pamssword": $("#Loginpamssword").val(),
+                    },
+                    dataType: "JSON",
+                    async: false,
+                    beforeSend: function () {
+                        alert("正在提交");
+                    },
+                    success: function (data) {
+                        alert(data.msg);
+                        if (data.code==1) {
+                            location.href = "CLOT.html";
+                        }
+					},
+                    error: function () {
+                        alert("提交失败");
+                    }
+                });
+            })
+        })
+	</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
